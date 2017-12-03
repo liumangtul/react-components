@@ -101,11 +101,11 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       //react
-      'process.dev':{
-        'NODE_DEV':JSON.stringify(process.env.NODE_DEV)
+      'process.env':{
+        'NODE_ENV':JSON.stringify(process.env.NODE_ENV)
       },
       // 可在业务js代码中使用__DEV__判断是否是dev模式
-      __DEV__:JSON.stringify(JSON.parse((process.env.NODE_DEV === 'dev') || 'false'))
+      __DEV__:JSON.stringify(JSON.parse((process.env.NODE_ENV === 'dev') || 'false'))
     })
   ]
-}
+};
