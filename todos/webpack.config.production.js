@@ -1,5 +1,5 @@
 const path = require('path');
-const package = require('./package.json');
+const package = require('../package.json');
 const webpack = require('webpack');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const htmlWebpackPlugin = require('html-webpack-plugin');

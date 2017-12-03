@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "todos_mock": "node ./todos/mock/server.js",
     "todos_dev": "NODE_ENV=dev webpack-dev-server --colors --progress --config ./todos/webpack.config.dev.js -d",
-    "todos_build": "rm -rf ./build && NODE_ENV=production webpack --config ./todos/webpack.config.production.js --progress"
+    "todos_build": "rm -rf ./build && NODE_ENV=production webpack --config ./todos/webpack.config.production.js --progress",
+    "swiper_mock":"node ./swiper/mock/server.js",
+    "swiper_dev": "NODE_ENV=dev webpack-dev-server --progress --colors --config ./swiper/webpack.dev.config.js -d  --history-api-fallback",
+    "swiper_build": "NODE_ENV=production webpack --config ./swiper/webpack.production.config.js --progress --colors"
   },
   "author": "promise",
   "license": "ISC",
@@ -21,7 +24,10 @@
     "isomorphic-fetch": "^2.2.1",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
