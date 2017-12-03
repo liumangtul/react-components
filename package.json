@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "mock": "node ./mock/server.js",
-    "dev": "NODE_ENV=dev webpack-dev-server --colors --progress --config ./webpack.config.dev.js -d",
-    "build": "rm -rf ./build && NODE_ENV=production webpack --config ./webpack.config.production.js --progress"
+    "todos_mock": "node ./todos/mock/server.js",
+    "todos_dev": "NODE_ENV=dev webpack-dev-server --colors --progress --config ./todos/webpack.config.dev.js -d",
+    "todos_build": "rm -rf ./build && NODE_ENV=production webpack --config ./todos/webpack.config.production.js --progress"
   },
   "author": "promise",
   "license": "ISC",
