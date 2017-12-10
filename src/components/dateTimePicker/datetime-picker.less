@@ -1,0 +1,117 @@
+#datetime-picker-inpupt{
+  width:100%;
+  border-bottom:1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:100px;
+  h2{
+    flex:3;
+  }
+  input{
+    flex:7;
+    width:100%;
+    height:40px;
+    text-indent: 1em;
+    font-size:18px;
+    border-width:0px;
+  }
+  input:focus{
+    outline:none;
+  }
+}
+
+.datetime-picker-modal-show{
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+.datetime-picker-modal{
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+#datetime-picker-modal{
+  .datetime-picker-mask{
+    pointer-events: none;
+    background:linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%,rgba(255,255,255,1) 100%);
+    z-index: 2;
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+  }
+  -webkit-transition: 0.5s ease all;
+  -moz-transition: 0.5s ease all;
+  -ms-transition: 0.5s ease all;
+  -o-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+  position: absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:30%;
+  background:#fff;
+  border-top:1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  header{
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    border-bottom:1px solid #ccc;
+    flex:2;
+    h2{
+      line-height:50px;
+      font-size:18px;
+      padding-right:1em;
+      color:#37b15f;
+    }
+  }
+  .datetime-picker-modal-content{
+    height:100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex:8;
+    overflow:hidden;
+    position: relative;
+    .datetime-picker-select-parent{
+      display:flex;
+      flex:1;
+      .datetime-picker-select-box{
+        width:100%;
+        height:50px;
+        border-top:1px solid #ccc;
+        border-bottom:1px solid #ccc;
+        display:flex;
+        flex:1;
+        .datetime-box{
+          height:100%;
+          overflow: inherit !important;
+          flex:1;
+          .datetime-scroller-box-transition{
+            -webkit-transition: .3s ease all;
+            -moz-transition: .3s ease all;
+            -ms-transition: .3s ease all;
+            -o-transition: .3s ease all;
+            transition: .3s ease all;
+          }
+          .datetime-scroller-box{
+            li{
+              text-align: center;
+              line-height:50px;
+              font-size:20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
